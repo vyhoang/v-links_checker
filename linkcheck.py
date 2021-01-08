@@ -1,4 +1,4 @@
-# program 14 - Link Checker
+# program - Link Checker
 import re
 import undetected_chromedriver as uc
 import requests
@@ -89,10 +89,7 @@ class LinkChecker:
 
 
 def main():
-    print("\nRequirement 1")
-    print("\nThis is Program14 - Vy Hoang.")
 
-    print("\nRequirement 2")
     print("\nThis program demonstrates link verification and saving bad links to the report as csv file.")
 
     # Input url or take the default url
