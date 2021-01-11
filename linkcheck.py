@@ -1,4 +1,4 @@
-# program - Link Checker
+# program - Link Checker: check invalid links
 import re
 import undetected_chromedriver as uc
 import requests
