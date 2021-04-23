@@ -1,4 +1,10 @@
-# program - Link Checker: check invalid links
+# ________________________________________________________________________  #
+# Written by: Vy Hoang                                                      #
+# Program: Link Checker - Use requests, chrome driver settings              #
+# This program demonstrates link verification and saving bad links          #
+# to the report as csv file.                                                #
+# ________________________________________________________________________  #
+
 import re
 import undetected_chromedriver as uc
 import requests
@@ -90,17 +96,17 @@ class LinkChecker:
 
 def main():
 
-    print("\nThis program demonstrates link verification and saving bad links to the report as csv file.")
-
     # Input url or take the default url
-    url = input("\nEnter an url (default=https://docs.python.org/3/): ") or "https://docs.python.org/3/"
+    url = input("\nEnter an url (default=https://docs.python.org/3/): ")\
+          or "https://docs.python.org/3/"
     checker = LinkChecker()
     # search all urls in the page
     checker.crawlURL(url)
 
     if checker.hasBadLinks():
         # name of report file or default file
-        file = input("\nEnter a csv filename to save the report (default=report.csv):\n") or "report.csv"
+        file = input("\nEnter a csv filename to save the report (default=report.csv):\n") \
+               or "report.csv"
         # save report
         checker.reportBadLinks(file)
     else:
